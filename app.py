@@ -302,7 +302,7 @@ def main():
     renderer = SpaceRenderer(model=model, backend="matplotlib").render(agent_portrayal=agent_portrayal)
     line_plot = make_plot_component(["Cancer", "Healthy", "TCells"], page=0)
 
-    page = SolaraViz(
+    app = SolaraViz(
         model=model,
         renderer=renderer,
         model_params=model_params,
@@ -312,9 +312,9 @@ def main():
             "A simple model of cancer growth and immune system interaction using cellular automata."
         ),
     )
-    
-    return page
+
+    return app
 
 
 if __name__ == "__main__":
-    page = main()
+    app = main()
